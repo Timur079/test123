@@ -3,8 +3,8 @@ fun main() {
         val a = readLine()!!.toInt()
         val b = readLine()!!.toInt()
         val x = readLine()!!
-       kolkulate(a, b, x)
-
+        kolkulate(a, b, x)
+        println(kolkulate(a, b, x))
     println("Нажмите 1 чтобы выйти")
     val z = readLine()!!
     if (z == "1") {
@@ -16,17 +16,17 @@ fun main() {
         }
     }}
 
-fun kolkulate(num1:Int, num2:Int, sign:String = "+"){
-    when (sign){
+fun kolkulate(num1:Int, num2:Int, sign:String = "+"):String{
+    return when (sign){
         "+"->{
             val r = num1 + num2
-            print("" + num1 + " + " + num2 + " = " + r)
+             "" + num1 + " + " + num2 + " = " + r
         }
-        "-"->print("$num1 + $num2 = ${num1-num2}")
-        "*"->print(num1 * num2)
-        "/"->print(num1 / num2)
+        "-"-> "$num1 - $num2 = ${num1-num2}"
+        "*"-> "$num1 * $num2 = ${num1*num2}"
+        "/"-> "$num1 / $num2 = ${num1.toFloat()/num2}"
         else ->
-            print("Ошибка")
+             "Ошибка"
 
 
     }
