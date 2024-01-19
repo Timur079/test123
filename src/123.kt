@@ -1,17 +1,28 @@
 fun main() {
-    val a = readLine()!!.toInt()
-    val b = readLine()!!.toInt()
-    val x = readLine()!!
-    if (x == "+") {
-        print(a + b)
+    while (true) {
+        val a = readLine()!!.toInt()
+        val b = readLine()!!.toInt()
+        val x = readLine()!!
+        if (x == "+") {
+            println(a + b)
+        }
+        if (x == "-") {
+            println(a - b)
+        }
+        if (x == "*") {
+            println(a * b)
+        }
+        if (x == "/") {
+            println(a / b)
+        }
+
+    println("Нажмите 1 чтобы выйти")
+    val z = readLine()!!
+    if (z == "1") {
+        print("Пока")
+        break
     }
-    if (x == "-") {
-        print(a - b)
-    }
-    if (x == "*") {
-        print(a * b)
-    }
-    if (x == "/") {
-        print(a / b)
-    }
-}
+    else{
+        continue
+        }
+    }}
